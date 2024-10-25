@@ -1,5 +1,7 @@
 #!/bin/sh
 
+make re
+
 # Set LIBFT_PATH to the current directory where the script is run
 LIBFT_PATH=$(pwd)
 
@@ -8,3 +10,5 @@ cd ~/carolette
 
 # Run make with the dynamically set LIBFT_PATH
 make LIBFT_PATH="$LIBFT_PATH" && ./libft_tests && make fclean
+
+cd $LIBFT_PATH && make fclean
