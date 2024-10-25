@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include "ansi_colors.h"
+#include "../include/libft.h"
+#include "../include/ansi_colors.h"
 #include <ctype.h>
 #include <stdio.h>
 

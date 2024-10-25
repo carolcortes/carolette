@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_tests.c                                      :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 15:32:57 by cade-oli          #+#    #+#             */
-/*   Updated: 2024/10/23 17:01:36 by cade-oli         ###   ########.fr       */
+/*   Created: 2024/10/23 10:19:24 by cade-oli          #+#    #+#             */
+/*   Updated: 2024/10/23 17:09:29 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft_tests.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int	main(void)
-{
-	ft_isalpha_test();
-	ft_isdigit_test();
-	ft_isalnum_test();
-	ft_isascii_test();
-	ft_isprint_test();
-	ft_strlen_test();
-	return (0);
-}
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+int	ft_strlen(const char *str);
+
+#endif
