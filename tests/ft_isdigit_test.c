@@ -18,7 +18,7 @@
 int	ft_isdigit_test(void)
 {
 	int chars[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-					'A', 'z', '!', -1, 128};
+					'A', 'z', '!', -1, 128, '\t'};
 	int	i;
 	int	test_len;
 	int	c;
@@ -33,9 +33,7 @@ int	ft_isdigit_test(void)
 	{
 		c = chars[i];
 		original = isdigit(c);
-		if (original > 0)
-			original = 1;
-		if (original == ft_isdigit(c))
+		if (!original == !ft_isdigit(c))
 			printf("%s[✔] Test passed for input '%c' (ASCII: %d)%s\n",
 				GREEN, c, c, RESET);
 		else

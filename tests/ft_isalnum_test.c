@@ -6,7 +6,7 @@
 /*   By: abessa-m <abessa-m@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:42:47 by cade-oli          #+#    #+#             */
-/*   Updated: 2024/10/26 16:27:42 by abessa-m         ###   ########.fr       */
+/*   Updated: 2024/10/26 17:21:08 by abessa-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_isalnum_test(void)
 	{
 		c = chars[i];
 		original = isalnum(c);
-		if (!isalnum(c) == !ft_isalnum(c))
+		if (!original == !ft_isalnum(c))
 			printf("%s[✔] Test passed for input '%c' (ASCII: %d)%s\n",
 				GREEN, c, c, RESET);
 		else

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: abessa-m <abessa-m@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:49:14 by cade-oli          #+#    #+#             */
-/*   Updated: 2024/10/23 15:49:41 by cade-oli         ###   ########.fr       */
+/*   Updated: 2024/10/26 17:20:37 by abessa-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	ft_isascii_test(void)
 {
-	int	chars[] = {'A', 'z', 'b', 'G', '!', '0', '9', -1, 128};
+	int	chars[] = {'A', 'z', 'b', 'G', '!', '0', '9', -1, 128, '\t'};
 	int	num_tests;
 	int	i;
 	int	c;
@@ -32,9 +32,7 @@ int	ft_isascii_test(void)
 	{
 		c = chars[i];
 		original = isascii(c);
-		if (original > 0)
-			original = 1;
-		if (original == ft_isascii(c))
+		if (!original == !ft_isascii(c))
 			printf("%s[✔] Test passed for input '%c' (ASCII: %d)%s\n",
 				GREEN, c, c, RESET);
 		else
