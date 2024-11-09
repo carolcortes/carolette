@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_tests.c                                      :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:32:57 by cade-oli          #+#    #+#             */
-/*   Updated: 2024/10/23 17:01:36 by cade-oli         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:17:23 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft_tests.h"
+#include "libft_tests.h"
+#include "utils.h"
 
 int	main(void)
 {
+	print_header();
 	ft_isalpha_test();
 	ft_isdigit_test();
 	ft_isalnum_test();

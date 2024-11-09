@@ -6,7 +6,7 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:33:36 by cade-oli          #+#    #+#             */
-/*   Updated: 2024/11/09 14:50:38 by cade-oli         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:21:27 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <ctype.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <string.h>
 
 int	ft_isalpha_test(void);
 int	ft_isdigit_test(void);

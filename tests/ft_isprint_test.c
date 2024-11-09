@@ -6,41 +6,46 @@
 /*   By: cade-oli <cade-oli@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:19:10 by cade-oli          #+#    #+#             */
-/*   Updated: 2024/10/23 16:22:19 by cade-oli         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:39:49 by cade-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
-#include "../include/ansi_colors.h"
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
+#include "ansi_colors.h"
+#include "libft_tests.h"
 
-int ft_isprint_test()
+int	ft_isprint_test(void)
 {
-	int	chars[] = {'A', ' ', 'b', 'G', '!', 32, 31, 0, 127};
-	int	num_tests;
-	int	i;
-	int	c;
-	int	original;
+	int			i;
+	int			c;
+	int			ko;
+	int			orig;
+	int			num_tests;
+	const int	chars[] = {'A', ' ', 'b', 'G', '!', 32, 31, 0, 127};
 
-	printf("\n*************************************");
-	printf("\n*     Running ft_isprint() Tests    *\n");
-	printf("*************************************\n");
-	num_tests = sizeof(chars) / sizeof(chars[0]);
+	printf("%sft_isprint\t     [", GREEN);
 	i = -1;
+	ko = 0;
+	num_tests = sizeof(chars) / sizeof(chars[0]);
 	while (++i < num_tests)
 	{
 		c = chars[i];
-		original = isprint(c);
-		if (original > 0)
-			original = 1;
-		if (original == ft_isprint(c))
-			printf("%s[✔] Test passed for input '%c' (ASCII: %d)%s\n",
-				GREEN, c, c, RESET);
+		orig = isprint(c);
+		if (orig != 0)
+			orig = 1;
+		if (orig == ft_isprint(c))
+			printf("✔");
 		else
-			printf("%s[✖] Test failed for input '%c' (ASCII: %d). Expected: %d, Got: %d%s\n",
-				RED, c, c, original, ft_isprint(c), RESET);
+		{
+			printf("%s✖%s", RED, GREEN);
+			ko = 1;
+		}
+		fflush(stdout);
+		usleep(100000);
 	}
-	printf("\n");
+	if (ko)
+		printf("]\t%sKO%s\n", RED, RESET);
+	else
+		printf("]\tOK%s\n", RESET);
 	return (0);
 }
