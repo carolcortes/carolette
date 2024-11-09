@@ -9,6 +9,6 @@ LIBFT_PATH=$(pwd)
 cd ~/carolette
 
 # Run make with the dynamically set LIBFT_PATH
-make LIBFT_PATH="$LIBFT_PATH" && ./libft_tests && make fclean
+make LIBFT_PATH="$LIBFT_PATH" && ./libft_tests
 
-cd $LIBFT_PATH && make fclean
+make fclean
